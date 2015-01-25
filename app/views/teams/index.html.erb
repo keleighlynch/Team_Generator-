@@ -1,0 +1,42 @@
+<h1>Listing teams</h1>
+
+    <tr>
+      <td align="center" colspan="5"><h1>Current Team List</h1></td>
+    </tr>
+    
+    <% if Team.count > 0 %>
+    <% Team.all.each_with_index do |team, i| %>
+      <tr>
+        <td class="left_label">Team <%= i+1 %>: </td> 
+       
+        <td> <%= team.members %></td> 
+      
+      </tr>
+
+    <%end %>
+
+    <% else %> 
+
+    <tr>
+      <td align= "center"> No teams have been made yet. Make new teams. </td>
+
+    </tr>
+
+    <% end %>
+
+    <tr>
+
+      <td height="height=80" align="center" colspan="2">
+
+        <div class= "green-btn one-row">
+        
+        <a href="/teams/make_teams">Make New Teams</a>
+
+        </div> 
+
+        <div class="green-btn one-row">
+          <a href="/">Student List</a>
+
+        </div>
+      </td>
+    </tr>
