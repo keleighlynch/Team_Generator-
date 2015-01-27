@@ -10,7 +10,9 @@ module TeamsHelper
 
 		end
 
-		num_teams = params[:num].to_i > 0 ? params[:num].to_i : 1
+		num_teams = params[:num].to_i 
+
+		# > 0 ? params[:num].to_i : 1
 
 		team_size = unassigned_students.count / num_teams
 
